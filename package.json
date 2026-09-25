@@ -1,20 +1,32 @@
 {
   "name": "@pipeworx/mcp-mast-nasa",
-  "version": "0.1.0",
-  "description": "MAST (Mikulski Archive for Space Telescopes) — Hubble/JWST/Kepler/TESS",
+  "version": "0.1.1",
+  "description": "MAST MCP — Space Telescopes archive.",
   "type": "module",
   "main": "src/index.ts",
   "types": "src/index.ts",
+  "bin": {
+    "mcp-mast-nasa": "bin/cli.js"
+  },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "mast-nasa"],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pipeworx-io/mcp-mast-nasa"
+    "url": "git+https://github.com/pipeworx-io/mcp-mast-nasa.git"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
   "devDependencies": {
-    "typescript": "^5.7.0"
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-0e9ab59fa3310b3a66b018ed2a8f11a17e089eb63eab2d02a23374efe721cb71",
+    "sourceCommit": "adb69d997f82a62e8e22b594488c7d04a227db35"
   }
 }
