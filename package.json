@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-mast-nasa",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "MAST MCP — Space Telescopes archive.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-c241a5d78dbbf5ed510827a6705c0c7dcaf2a0a6bf6ac98c028feb8cd6dd96c7",
-    "sourceCommit": "6182c4cfebddb94950e060b5d2fca18f18ad1aca"
+    "sourceHash": "v1-40a29144be988dff712fba5689f6d5c2fff7b66f815ca8a1751d2d71efe6de51",
+    "sourceCommit": "ba9dd6df5992aeb16ef2425ee86d1752c34ca636"
   }
 }
