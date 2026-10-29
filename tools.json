@@ -1,0 +1,87 @@
+[
+  {
+    "name": "cone_search",
+    "description": "Search MAST around (RA, Dec).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "ra": {
+          "type": "number"
+        },
+        "dec": {
+          "type": "number"
+        },
+        "radius_arcmin": {
+          "type": "number",
+          "description": "Default 1.0"
+        },
+        "mission": {
+          "type": "string",
+          "description": "e.g. \"HST\", \"JWST\". Optional."
+        },
+        "limit": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "ra",
+        "dec"
+      ]
+    }
+  },
+  {
+    "name": "mission_search",
+    "description": "Mission-scoped search with arbitrary criteria.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "mission": {
+          "type": "string",
+          "description": "e.g. \"HST\", \"JWST\", \"Pan-STARRS\", \"K2\", \"Kepler\", \"GALEX\", \"TESS\""
+        },
+        "criteria": {
+          "type": "object",
+          "description": "Object of MAST filter columns → values."
+        },
+        "limit": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "mission",
+        "criteria"
+      ]
+    }
+  },
+  {
+    "name": "caom",
+    "description": "Generic CAOM (Common Archive Observation Model) query.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "object",
+          "description": "Raw MAST request body (service + params)."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "lookup_name",
+    "description": "Resolve target name → coords.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  }
+]
